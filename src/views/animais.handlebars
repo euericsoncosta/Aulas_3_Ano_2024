@@ -1,7 +1,15 @@
 <div class="container">
   <div class="left-panel">
     <h2>Cadastro</h2>
-    <form action="/cadastrar" method="post">
+    <form action="/" method="post">
+      <label for="nome">Nome:</label><br />
+      <input type="text" id="nome" name="nome" /><br />
+      <label for="email">Email:</label><br />
+      <input type="email" id="email" name="email" /><br /><br />
+      <button type="submit">Cadastrar</button>
+    </form>
+    <h2>Remover</h2>
+    <form action="/remover" method="post">
       <label for="nome">Nome:</label><br />
       <input type="text" id="nome" name="nome" /><br />
       <label for="email">Email:</label><br />

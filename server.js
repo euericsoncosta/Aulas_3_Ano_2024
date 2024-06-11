@@ -8,17 +8,17 @@ const port = 3000;
 app.use(express.static(path.resolve(__dirname, "public")));
 
 // Importando as rotas
-const homeRouter = require("./src/routes/routes");
+const animaisRouter = require("./src/routes/animaisRoutes");
 
 // Configuração do Handlebars
 app.engine("handlebars", exphbs.engine());
 app.set("view engine", "handlebars");
 
 // Especificando o diretório de visualizações
-app.set("views", "./src/views");
+app.set("views", path.resolve(__dirname, "src", "views"));
 
 // Roteamento
-app.use("/", homeRouter);
+app.use("/animais", animaisRouter);
 
 // Iniciando o servidor
 app.listen(port, () => {
